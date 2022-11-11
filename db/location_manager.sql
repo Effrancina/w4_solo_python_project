@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS cities;
 DROP TABLE IF EXISTS restaurants;
+DROP TABLE IF EXISTS cities;
 
 
-CREATE TABLE city (
+CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
     been_to BOOLEAN DEFAULT FALSE
@@ -13,6 +13,6 @@ CREATE TABLE restaurants (
     name VARCHAR (255),
     cuisine VARCHAR (255),
     tried BOOLEAN DEFAULT FALSE,
-    city_id INT REFERENCES city(id)
+    city_id INT REFERENCES cities(id) ON DELETE CASCADE
 );
 
