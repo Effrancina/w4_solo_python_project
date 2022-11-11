@@ -44,7 +44,7 @@ restaurant_repository.save(restaurant_6)
 restaurant_7 = Restaurant('Dajeon Cafe', 'Asian vegan', city_4, False)
 restaurant_repository.save(restaurant_7)
 
-restaurant_7 = Restaurant('April and mAY 45', 'Asian vegan', city_4, False)
+restaurant_7 = Restaurant('April and May 45', 'Asian vegan', city_4, False)
 restaurant_repository.save(restaurant_7)
 
 restaurant_7 = Restaurant('Vegenarang', 'Korean temple-style vegan', city_4, False)
