@@ -3,7 +3,13 @@ from models.city import City
 import repositories.city_repository as city_repository
 
 cities_blueprint = Blueprint("cities", __name__)
+app = Flask(__name__)
 
+
+@app.route('/')
+def welcome():
+   return 'Welcome to your vegan bucket list for South Korea!'
+   
 #index
 @cities_blueprint.route("/cities")
 def cities():
