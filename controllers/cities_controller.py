@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-   return 'Welcome to your vegan bucket list for South Korea!'
+   return 'Welcome'
    
 #index
 @cities_blueprint.route("/cities")

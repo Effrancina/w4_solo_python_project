@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK - Vegan Bucket List</title>
+    <title>🇰🇷 Vegan Foodie</title>
 </head>
 <body>
+    <div class="fixed"> 
+        <img class="emojidex-emoji" src="https://cdn.emojidex.com/emoji/seal/kimchi.png" emoji-code="kimchi" height="50" width="50" alt="kimchi" />
+        <h1 align="middle">Your Vegan Hotspots</h1>
+    </div>
     {% block content %}
     {% endblock %}
 </body>

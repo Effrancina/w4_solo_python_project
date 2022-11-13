@@ -1,0 +1,25 @@
+body {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.fixed {
+    display: flex;
+    background: linear-gradient(#e66465, #9198e5);
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;;
+    color: black;
+    cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+h1 { 
+    margin: 0rem;
+    padding: 0rem;
+}
+img {
+    height: 5rem;
+    width: 5rem;
+    padding: 0rem;
+    margin: 0rem;
+}

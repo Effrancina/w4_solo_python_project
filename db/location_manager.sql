@@ -15,4 +15,3 @@ CREATE TABLE restaurants (
     tried BOOLEAN DEFAULT FALSE,
     city_id INT REFERENCES cities(id) ON DELETE CASCADE
 );
-

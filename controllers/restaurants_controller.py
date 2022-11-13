@@ -11,7 +11,7 @@ def restaurants():
     restaurants = restaurant_repository.select_all()
     return render_template("restaurants/index.html", restaurants = restaurants)
 
-#new city
+#new restaurant
 @restaurants_blueprint.route("/restaurants/new")
 def new_restaurant():
     return render_template("restaurants/new.html")
