@@ -13,26 +13,27 @@ def save(restaurant):
 
 def select_all():
     restaurants = []
-    sql = """SELECT * FROM restaurants"""
+    sql = "SELECT * FROM restaurants"
     results = run_sql(sql)
     for row in results:
-        restaurant = Restaurant(row['name'], row['cuisine'], row['tried'], row['city_id'])
+        city = city_repository.select(row['city_id'])
+        restaurant = Restaurant(row['name'], row['cuisine'], city, row['tried'])
         restaurants.append(restaurant)
     return restaurants
 
 def select(id):
     restaurant = None
-    sql = """SELECT * FROM restaurants WHERE id = %s"""
+    sql = "SELECT * FROM restaurants WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)
     if results:
         result = results[0]
         city = city_repository.select(result['city_id'])
-        restaurant = Restaurant(result['name'], result['cuisine'], result['tried'], city)
+        restaurant = Restaurant(result['name'], result['cuisine'], city, result['tried'])
     return restaurant
 
 def delete(id):
-    sql = """DELETE FROM restaurants WHERE id = %s"""
+    sql = "DELETE FROM restaurants WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 

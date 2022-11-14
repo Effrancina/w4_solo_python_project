@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.city import City
+from models.restaurant import Restaurant
 
 def save(city):
     sql = """INSERT INTO cities (name, been_to)
@@ -12,10 +13,10 @@ def save(city):
 
 def select_all():
     cities = []
-    sql = """SELECT * FROM cities"""
+    sql = "SELECT * FROM cities"
     results = run_sql(sql)
     for row in results:
-        city = City(row['name'], row['been_to'])
+        city = City(row['name'], row['been_to'], row['id'])
         cities.append(city)
     return cities
 
@@ -44,3 +45,13 @@ def update(city):
     values = [city.name, city.been_to, city.id]
     run_sql(sql, values)
 
+def show_restaurants(city_id):
+    sql = "SELECT restaurants.* FROM restaurants WHERE city_id = %s"
+    values = [city_id]
+    city_restaurants = []
+    restaurants = run_sql(sql, values)
+    for row in restaurants:
+        city = select(city_id)
+        new_restaurant = Restaurant(row['name'], row['cuisine'], city, row['tried'], row['id'])
+        city_restaurants.append(new_restaurant)
+    return city_restaurants

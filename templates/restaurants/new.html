@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
+<h3>Add a new restaurant</h3>
 
+<form action="/restaurants" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="city">City:</label>
+            <select class="dropbtn">
+                {% for city in cities %}
+                <option id="name" name="city">{{ city.name}} </option>
+                {% endfor %}
+            </select>
+    <div>
+        <label for="cuisine">Cuisine:</label>
+        <input type="text" id="cuisine" name="cuisine">
+        <input type="submit">
+    </div>
+</form>
 
 
 

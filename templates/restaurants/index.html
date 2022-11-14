@@ -1,34 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-
-
 <h3>Restaurants</h3>
-{%for restaurant in restaurants %}
-<section>
-    <p>{{restaurant.name}}</p>
-
-</section>
-
+{% for restaurant in restaurants %}
+<div class="flex">
+    <section>
+        <p>Name: {{restaurant.name}}</p>
+        <p>Cuisine: {{restaurant.cuisine}}</p>
+        <p>City: {{restaurant.city.name}}</p>
+        <p>Tried? {{restaurant.tried}}</p>
+    </section>
+</div>
 {% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% endblock %}
+{% endblock content%}

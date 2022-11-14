@@ -1,6 +1,12 @@
 body {
     margin: 0rem;
     padding: 0rem;
+    height: 120vh;   
+}
+
+html {
+    height: 120vh;
+    background-image: url('img/south_korea.jpeg');
 }
 
 .fixed {
@@ -11,8 +17,23 @@ body {
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
     justify-content: flex-start;
-
 }
+
+main {
+    margin: 0rem;
+    padding: 0rem;
+    background-image: url('img/south_korea.jpeg');
+    background-blend-mode: soft-light;
+    height: 100%;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;;
+    color: white;
+}
+
+article > p {
+    margin: 0rem;
+    padding: 0rem;
+}
+
 h1 { 
     margin: 0rem;
     padding: 0rem;
@@ -22,4 +43,19 @@ img {
     width: 5rem;
     padding: 0rem;
     margin: 0rem;
+}
+
+h3 {
+    margin: 0rem;
+    padding: 0rem;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: horizontal;
+
 }
