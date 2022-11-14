@@ -4,12 +4,12 @@ import repositories.city_repository as city_repository
 
 def save(restaurant):
     sql = """INSERT INTO restaurants (name, cuisine, tried, city_id)
-    VALUES (%s, %s, %s, %s) RETURNING *"""
+    VALUES (%s, %s, %s, %s) RETURNING id"""
     values = [restaurant.name, restaurant.cuisine, restaurant.tried, restaurant.city.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     restaurant.id = id
-    return results
+    return 
 
 def select_all():
     restaurants = []
@@ -17,7 +17,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         city = city_repository.select(row['city_id'])
-        restaurant = Restaurant(row['name'], row['cuisine'], city, row['tried'])
+        restaurant = Restaurant(row['name'], row['cuisine'], city, row['tried'], row['id'])
         restaurants.append(restaurant)
     return restaurants
 
@@ -29,7 +29,7 @@ def select(id):
     if results:
         result = results[0]
         city = city_repository.select(result['city_id'])
-        restaurant = Restaurant(result['name'], result['cuisine'], city, result['tried'])
+        restaurant = Restaurant(result['name'], result['cuisine'], city, result['tried'], result['id'])
     return restaurant
 
 def delete(id):

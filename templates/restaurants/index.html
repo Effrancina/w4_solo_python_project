@@ -2,13 +2,19 @@
 {% block content %}
 <h3>Restaurants</h3>
 {% for restaurant in restaurants %}
-<div class="flex">
-    <section>
-        <p>Name: {{restaurant.name}}</p>
-        <p>Cuisine: {{restaurant.cuisine}}</p>
-        <p>City: {{restaurant.city.name}}</p>
-        <p>Tried? {{restaurant.tried}}</p>
-    </section>
-</div>
+    <div class="flex">
+        <section>
+            <p>Name: {{restaurant.name}}</p>
+            <p>Cuisine: {{restaurant.cuisine}}</p>
+            <p>City: {{restaurant.city.name}}</p>
+            <p>Tried? {{restaurant.tried}}</p>
+            <p>{{restaurant.id}}</p>
+        </section>
+    </div>
+        <a href="/restaurants/{{restaurant.id}}/edit" class="button">Edit</a>
+        <br>
+        <form action="/cities/{{restaurant.id}}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
 {% endfor %}
 {% endblock content%}

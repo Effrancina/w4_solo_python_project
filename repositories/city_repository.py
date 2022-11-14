@@ -22,7 +22,7 @@ def select_all():
 
 def select(id):
     city = None
-    sql = """SELECT * FROM cities WHERE id = %s"""
+    sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)
     if results:
@@ -31,7 +31,7 @@ def select(id):
     return city
 
 def delete(id):
-    sql = """DELETE FROM cities WHERE id = %s"""
+    sql = "DELETE FROM cities WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
