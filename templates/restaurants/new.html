@@ -9,15 +9,19 @@
     </div>
     <div>
         <label for="city">City:</label>
-            <select class="dropbtn">
+            <select class="dropbtn" name="city_id">
                 {% for city in cities %}
-                <option id="name" name="city">{{ city.name}} </option>
+                <option id="name" value="{{city.id}}">{{ city.name}} </option>
                 {% endfor %}
             </select>
     <div>
         <label for="cuisine">Cuisine:</label>
         <input type="text" id="cuisine" name="cuisine">
         <input type="submit">
+    </div>
+    <div>
+        <label for="tried">Tried?</label>
+        <input type="checkbox" id="tried" name="tried">
     </div>
 </form>
 

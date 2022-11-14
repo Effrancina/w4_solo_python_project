@@ -27,7 +27,7 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        city = City(result['name'], result['been_to'])
+        city = City(result['name'], result['been_to'], result['id'])
     return city
 
 def delete(id):
