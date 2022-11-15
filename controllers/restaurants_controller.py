@@ -56,7 +56,10 @@ def update_restaurant(id):
     name = request.form["name"]
     city = city_repository.select(request.form["city_id"])
     cuisine = request.form["cuisine"]
-    tried = request.form["tried"]
+    if request.form.get("tried"):
+        tried = True
+    else:
+        tried = False
     restaurant = Restaurant(name, city, cuisine, tried, id)
     restaurant_repository.update_restaurant(restaurant)
     return redirect("/restaurants")
