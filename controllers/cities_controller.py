@@ -2,6 +2,7 @@ from flask import Blueprint, Flask, redirect, render_template, request
 from models.city import City
 import repositories.city_repository as city_repository
 import repositories.restaurant_repository as restaurant_repository
+import pdb
 
 cities_blueprint = Blueprint("cities", __name__)
 app = Flask(__name__)
@@ -26,15 +27,19 @@ def new_city():
 @cities_blueprint.route("/cities", methods=["POST"])
 def create_city():
     name = request.form["name"]
-    new_city = City(name)
+    if request.form.get("visited"):
+        visited = True
+    else:
+        visited = False
+    new_city = City(name, visited)
     city_repository.save(new_city)
     return redirect("cities")
 
+#restaurants in a specific city
 @cities_blueprint.route("/cities/<id>/restaurants")
 def cities_restaurants(id):
     restaurants = city_repository.show_restaurants(id)
     return render_template("restaurants/index.html", restaurants=restaurants)
-
 
 #edit city
 @cities_blueprint.route("/cities/<id>/edit")
@@ -46,8 +51,12 @@ def edit_city(id):
 @cities_blueprint.route("/cities/<id>", methods=["POST"])
 def update_city(id):
     name = request.form["name"]
-    city = City(name, id)
-    city_repository.update(city)
+    if request.form.get("visited"):
+        visited = True
+    else:
+        visited = False
+    city = City(name, visited, id)
+    city_repository.update_city(city)
     return redirect("/cities")
 
 

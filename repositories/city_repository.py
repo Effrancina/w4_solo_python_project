@@ -1,11 +1,12 @@
 from db.run_sql import run_sql
 from models.city import City
 from models.restaurant import Restaurant
+import pdb
 
 def save(city):
-    sql = """INSERT INTO cities (name, been_to)
+    sql = """INSERT INTO cities (name, visited)
     VALUES (%s, %s) RETURNING *"""
-    values = [city.name, city.been_to]
+    values = [city.name, city.visited]
     results = run_sql(sql, values)
     id = results[0]['id']
     city.id = id
@@ -16,7 +17,7 @@ def select_all():
     sql = "SELECT * FROM cities"
     results = run_sql(sql)
     for row in results:
-        city = City(row['name'], row['been_to'], row['id'])
+        city = City(row['name'], row['visited'], row['id'])
         cities.append(city)
     return cities
 
@@ -27,7 +28,7 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        city = City(result['name'], result['been_to'], result['id'])
+        city = City(result['name'], result['visited'], result['id'])
     return city
 
 def delete(id):
@@ -40,9 +41,8 @@ def delete_all():
     run_sql(sql) 
 
 def update_city(city):
-    sql = """UPDATE cities SET (name, been to) = (%s, %s)
-    WHERE id = %s"""
-    values = [city.name, city.been_to, city.id]
+    sql = "UPDATE cities SET (name, visited) = (%s, %s) WHERE id = %s"
+    values = [city.name, city.visited, city.id]
     run_sql(sql, values)
 
 def show_restaurants(city_id):

@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<h3>Edit a city:</h3>
-<form>
+<h2>Edit a city:</h2>
+
+<form action="/cities/1" method="POST">
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" value="{{ cities.name }}">
+        <input type="text" id="name" name="name" value="{{ cities.name }}">
     </div>
+    <div>
+        <label for="visited">Have you been?</label>
+        <input type="checkbox" id="visited" name="visited">
+    </div>
+    <input type="submit" value="Update">
 </form>
 {% endblock %}

@@ -1,30 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<h3>Update a restaurant:</h3>
+<h2>Edit a restaurant:</h2>
 <form>
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" value="{{ restaurants.name }}">
     </div>
-</form>
-<div>
-    <label for="name">City:</label>
-        <select class="dropbtn" name="city_id">
-            {% for city in cities %}
-            <option id="name" value="{{cities.id}}">{{ cities.name }}</option>
-            {% endfor %}
-        </select>
-<div>
-<form>
+
+    <div>
+        <label for="city_id">City:</label>
+            <select class="dropbtn" name="city_id">
+                {% for city in cities %}
+                <option id="city_id" value="{{city.id}}">{{ city.name }}</option>
+                {% endfor %}
+            </select>
+    <div>
+
     <div>
         <label for="cuisine">Cuisine:</label>
         <input type="text" id="cuisine" value="{{ restaurants.cuisine }}">
     </div>
-</form>
-<form>
+
     <div>
         <label for="tried">Tried?</label>
         <input type="checkbox" id="tried" name="tried">
     </div>
+    <input type="submit" value="Update">
 </form>
 {% endblock %}

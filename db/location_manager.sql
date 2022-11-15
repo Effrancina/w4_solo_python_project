@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS cities;
 CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    been_to BOOLEAN DEFAULT FALSE
+    visited BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE restaurants (

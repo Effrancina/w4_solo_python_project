@@ -1,5 +1,5 @@
 class City:
-    def __init__(self, name, been_to = False, id = None):
+    def __init__(self, name, visited=False, id = None):
         self.name = name
-        self.been_to = been_to
+        self.visited = visited
         self.id = id

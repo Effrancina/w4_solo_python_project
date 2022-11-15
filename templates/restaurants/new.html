@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h3>Add a new restaurant</h3>
+<h2>Add a new restaurant</h2>
 
 <form action="/restaurants" method="POST">
     <div>
@@ -17,12 +17,12 @@
     <div>
         <label for="cuisine">Cuisine:</label>
         <input type="text" id="cuisine" name="cuisine">
-        <input type="submit">
     </div>
     <div>
         <label for="tried">Tried?</label>
         <input type="checkbox" id="tried" name="tried">
     </div>
+    <input type="submit">
 </form>
 
 
