@@ -36,18 +36,31 @@ def cities_restaurants(id):
     return render_template("restaurants/index.html", restaurants=restaurants)
 
 
-#update city
+#edit city
 @cities_blueprint.route("/cities/<id>/edit")
-def update_city(id):
+def edit_city(id):
     cities = city_repository.select(id)
     return render_template("cities/edit.html", cities=cities)
 
+#update city
+@cities_blueprint.route("/cities/<id>", methods=["POST"])
+def update_city(id):
+    name = request.form["name"]
+    city = City(name, id)
+    city_repository.update(city)
+    return redirect("/cities")
 
-# #delete city
-# @cities_blueprint.route("cities/<id>/delete", methods=["POST"])
+
+# # #delete city
+# @cities_blueprint.route("/cities/<id>/delete", methods=["POST"])
 # def delete_city(id):
-#     if 
-#     city_repository.delete(id)
+#     if city_repository.show_restaurants(id):
+#         print("Before removing this city, please make sure you have no restaurants you want to try!")
+#     else:
+#         city_repository.delete(id)
+#     return redirect("cities")
+
+
 # #delete all cities
 # @cities_blueprint.route
 # def delete_all():

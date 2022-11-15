@@ -39,7 +39,7 @@ def delete_all():
     sql = "DELETE FROM cities"
     run_sql(sql) 
 
-def update(city):
+def update_city(city):
     sql = """UPDATE cities SET (name, been to) = (%s, %s)
     WHERE id = %s"""
     values = [city.name, city.been_to, city.id]

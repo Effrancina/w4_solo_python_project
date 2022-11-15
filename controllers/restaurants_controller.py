@@ -35,7 +35,8 @@ def create_restaurant():
     return redirect("/restaurants")
 
 
-# #update restaurant
+
+# #delete all restaurant
 
 
 # #delete restaurant
@@ -44,10 +45,12 @@ def delete_restaurant(id):
     restaurant_repository.delete(id)
     return redirect("/restaurants")
 
+# #edit restaurant
 @restaurants_blueprint.route("/restaurants/<id>/edit")
 def edit_restaurant(id):
     restaurants = restaurant_repository.select(id)
     return render_template("/restaurants/edit.html", restaurants=restaurants)
 
-# #delete all restaurant
-# @restaurants_blueprint.route:
+
+# #update restaurants
+# @restaurants_blueprint.route()
