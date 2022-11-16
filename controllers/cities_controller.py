@@ -7,7 +7,6 @@ import pdb
 cities_blueprint = Blueprint("cities", __name__)
 app = Flask(__name__)
 
-
 @app.route('/')
 def welcome():
    return 'Welcome'
@@ -58,7 +57,5 @@ def update_city(id):
     city = City(name, visited, id)
     city_repository.update_city(city)
     return redirect("/cities")
-
-
 
 
