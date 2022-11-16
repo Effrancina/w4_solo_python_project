@@ -7,8 +7,14 @@
             <p>Name: {{restaurant.name}}</p>
             <p>Cuisine: {{restaurant.cuisine}}</p>
             <p>City: {{restaurant.city.name}}</p>
-            <p>Tried? {{restaurant.tried}}</p>
-            <p>{{restaurant.id}}</p>
+            <div>
+                <label for="tried">Tried?</label>
+                {% if restaurant.tried %}
+                <input type="checkbox" id="tried" name="tried" checked>
+                {% else %}
+                <input type="checkbox" id="tried" name="tried">
+                {% endif %}
+            </div>
         </section>
     </div>
         <a href="/restaurants/{{restaurant.id}}/edit" class="button">Edit</a>

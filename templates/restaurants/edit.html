@@ -23,7 +23,11 @@
 
     <div>
         <label for="tried">Tried?</label>
+        {% if restaurants.tried %}
+        <input type="checkbox" id="tried" name="tried" checked>
+        {% else %}
         <input type="checkbox" id="tried" name="tried">
+        {% endif %}
     </div>
     <input type="submit" value="Update">
 </form>
