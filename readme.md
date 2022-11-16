@@ -17,9 +17,10 @@ The user is able to add and edit both cities and restaurants to the app, and the
 5. Option to delete restaurants
 
 # Extensions
-1. Impossible to mark a restaurant as tried if the city hasn't been marked as visited/been to
-2. Give restaurants a score from 1 to 5 kimchis
-3. Mark restaurants as favourite
+1. Option to delete a city (if empty)
+2. Impossible to mark a restaurant as tried if the city hasn't been marked as visited/been to
+3. Give restaurants a score from 1 to 5 kimchis
+4. Mark restaurants as favourite
 
 # Extra extensions
 1. Connect to Kakao maps for directions and to see locations

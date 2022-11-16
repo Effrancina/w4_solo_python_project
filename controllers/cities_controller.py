@@ -60,17 +60,5 @@ def update_city(id):
     return redirect("/cities")
 
 
-# # #delete city
-# @cities_blueprint.route("/cities/<id>/delete", methods=["POST"])
-# def delete_city(id):
-#     if city_repository.show_restaurants(id):
-#         print("Before removing this city, please make sure you have no restaurants you want to try!")
-#     else:
-#         city_repository.delete(id)
-#     return redirect("cities")
 
-
-# #delete all cities
-# @cities_blueprint.route
-# def delete_all():
 
