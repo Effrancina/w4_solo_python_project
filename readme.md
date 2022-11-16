@@ -4,8 +4,10 @@ My application is designed to help the user track their favourite vegan restaura
 
 Finding vegan restaurants in South Korea can be quite challenging, and this app is meant not only to help the user remember the places they have been to before, but also to store restaurants they plan on trying during their future trips.
 
-! [Class diagram] (img/Class_diagram.png)
-! [Object diagram] (img/Object_diagram.png)
+![Class diagram](img/Class_diagram.png)
+
+
+![Object diagram](img/Object_diagram.png)
 
 The user is able to add and edit both cities and restaurants to the app, and they can also delete restaurants if they wish to. Additionally, they can mark cities as "visited", and restaurants as "tried".
 
