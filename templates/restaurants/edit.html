@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Edit a restaurant:</h2>
-<form>
+<form action="/restaurants/{{restaurants.id}}" method="POST">
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" value="{{ restaurants.name }}">
+        <input type="text" id="name" name="name" value="{{ restaurants.name }}">
     </div>
 
     <div>
@@ -18,7 +18,7 @@
 
     <div>
         <label for="cuisine">Cuisine:</label>
-        <input type="text" id="cuisine" value="{{ restaurants.cuisine }}">
+        <input type="text" id="cuisine" name="cuisine" value="{{ restaurants.cuisine }}">
     </div>
 
     <div>

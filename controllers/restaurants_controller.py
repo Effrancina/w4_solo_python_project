@@ -30,7 +30,7 @@ def create_restaurant():
         tried = True
     else:
         tried = False
-    new_restaurant = Restaurant(name, cuisine, city, tried)
+    new_restaurant = Restaurant(name, cuisine, city, tried, id)
     restaurant_repository.save(new_restaurant)
     return redirect("/restaurants")
 
@@ -54,12 +54,12 @@ def edit_restaurant(id):
 @restaurants_blueprint.route("/restaurants/<id>", methods=["POST"])
 def update_restaurant(id):
     name = request.form["name"]
-    city = city_repository.select(request.form["city_id"])
+    city = city_repository.select(int(request.form["city_id"]))
     cuisine = request.form["cuisine"]
     if request.form.get("tried"):
         tried = True
     else:
         tried = False
-    restaurant = Restaurant(name, city, cuisine, tried, id)
+    restaurant = Restaurant(name, cuisine, city, tried, id)
     restaurant_repository.update_restaurant(restaurant)
     return redirect("/restaurants")

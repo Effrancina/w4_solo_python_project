@@ -42,7 +42,7 @@ def delete_all():
     run_sql(sql) 
 
 def update_restaurant(restaurant):
-    sql = """UPDATE restaurants SET (name, cuisine, tried, city_id) = (%s, %s, %s, %s)
+    sql = """UPDATE restaurants SET (name, city_id, cuisine, tried) = (%s, %s, %s, %s)
     WHERE id = %s"""
-    values = [restaurant.name, restaurant.cuisine, restaurant.tried, restaurant.city.id]
+    values = [restaurant.name, restaurant.city.id, restaurant.cuisine, restaurant.tried, restaurant.id]
     run_sql(sql, values)
