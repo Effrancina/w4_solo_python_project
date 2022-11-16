@@ -1,50 +1,29 @@
-{% extends "base.html" %}
+{% extends "restaurants/base2.html" %}
 {% block content %}
-<h2>Add a new restaurant</h2>
+<div class="restaur">
+    <h1>Add a new restaurant</h1>
 
-<form action="/restaurants" method="POST">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-    </div>
-    <div>
-        <label for="city">City:</label>
-            <select class="dropbtn" name="city_id">
-                {% for city in cities %}
-                <option id="name" value="{{city.id}}">{{ city.name}} </option>
-                {% endfor %}
-            </select>
-    <div>
-        <label for="cuisine">Cuisine:</label>
-        <input type="text" id="cuisine" name="cuisine">
-    </div>
-    <div>
-        <label for="tried">Tried?</label>
-        <input type="checkbox" id="tried" name="tried">
-    </div>
-    <input type="submit">
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <form action="/restaurants" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="city">City:</label>
+                <select class="dropbtn" name="city_id">
+                    {% for city in cities %}
+                    <option id="name" value="{{city.id}}">{{ city.name}} </option>
+                    {% endfor %}
+                </select>
+        <div>
+            <label for="cuisine">Cuisine:</label>
+            <input type="text" id="cuisine" name="cuisine">
+        </div>
+        <div>
+            <label for="tried">Tried?</label>
+            <input type="checkbox" id="tried" name="tried">
+        </div>
+        <input type="submit">
+    </form>
+</div>
 {% endblock %}

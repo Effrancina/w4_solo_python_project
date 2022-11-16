@@ -4,29 +4,78 @@ body {
     height: 120vh;   
 }
 
-html {
-    height: 120vh;
-    background-image: url('img/south_korea.jpeg');
-}
 
 .fixed {
     display: flex;
     background: linear-gradient(#e66465, #9198e5);
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;;
+    font-family: 'Shadows Into Light Two', cursive;
     color: black;
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
     justify-content: flex-start;
+    position: fixed;
+    width: 100%;
 }
+
+.footer {
+    position: fixed;
+    display: flex;
+    background: linear-gradient(#e66465, #9198e5);
+    font-family: 'Shadows Into Light Two', cursive;
+    color: black;
+    cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
 
 main {
     margin: 0rem;
     padding: 0rem;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: black;
+}
+
+.back_img {
     background-image: url('img/south_korea.jpeg');
-    background-blend-mode: soft-light;
-    height: 100%;
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;;
+    background-size: cover;
+    /* background-blend-mode: soft-light; */
+    background-attachment: fixed;    
+}
+
+
+.restaur {
+    padding: 78px 0 0 30px;
+}
+
+.body_text {
+    padding: 78px 0 0 10px;
     color: white;
+}
+
+
+
+.city_back {
+    padding: 0rem;
+    height: 120vh;
+    background-image: url('img/Gangnam_by_night_Seoul_South_Korea.jpg.webp');
+    background-size: cover;
+    /* background-blend-mode: soft-light; */
+    background-attachment: fixed;
+}
+
+.food_back {
+    margin: 0rem;
+    padding: 0rem;
+    height: 120vh;
+    /* min-height: 120vh; */
+    background-image: url('img/baked-eggplant-salad-paprika-carrot-onion-garlic-korean-vegan-food-recipe-background-top-view-196863629.jpeg');
+    background-size: cover;
+    /* background-blend-mode: soft-light; */
+    background-attachment: fixed;
 }
 
 article > p {
@@ -38,26 +87,30 @@ h1 {
     margin: 0rem;
     padding: 0rem;
 }
-img {
+.emojidex-emoji {
     height: 5rem;
     width: 5rem;
     padding: 0rem;
     margin: 0rem;
 }
 
-h3 {
+/* h3 {
     margin: 0rem;
     padding: 0rem;
     text-align: center;
-}
+} */
 
-.flex {
+.menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: horizontal;
+    margin: 0rem;
+    background-color: transparent;
+    padding: 78px 0 0 30px;
 }
+
 
 .button {
     -webkit-appearance: button;
@@ -65,4 +118,8 @@ h3 {
     appearance: button;
     text-decoration: none;
     color: initial;
+}
+
+footer {
+    background: linear-gradient(#e66465, #9198e5);
 }

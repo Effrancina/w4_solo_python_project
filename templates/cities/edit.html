@@ -1,20 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
-<h2>Edit a city:</h2>
 
-<form action="/cities/{{cities.id}}" method="POST">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ cities.name }}">
-    </div>
-    <div>
-        <label for="visited">Have you been?</label>
-        {% if cities.visited %}
-        <input type="checkbox" id="visited" name="visited" checked>
-        {% else %}
-        <input type="checkbox" id="visited" name="visited">
-        {% endif %}
-    </div>
-    <input type="submit" value="Update">
-</form>
+{% extends "cities/base1.html" %}
+{% block content%}
+    <h1>Edit a city:</h1>
+
+    <form action="/cities/{{cities.id}}" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ cities.name }}">
+        </div>
+        <div>
+            <label for="visited">Have you been?</label>
+            {% if cities.visited %}
+            <input type="checkbox" id="visited" name="visited" checked>
+            {% else %}
+            <input type="checkbox" id="visited" name="visited">
+            {% endif %}
+        </div>
+        <input type="submit" value="Update">
+    </form>
 {% endblock %}
