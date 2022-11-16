@@ -2,8 +2,9 @@
 {% extends "restaurants/base2.html" %}
 {% block content %}
 <div class="restaur">
-    <h1>Edit a restaurant:</h1>
-    <form action="/restaurants/{{restaurants.id}}" method="POST">
+    <h1 class="restaurant_transparency">Edit a restaurant:</h1>
+    <br>
+    <form action="/restaurants/{{restaurants.id}}" method="POST" class="restaurant_transparency">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{ restaurants.name }}">
