@@ -24,7 +24,7 @@ a {
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
     /* justify-content: flex-start; */
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: sticky;
     width: 100%;
 }
@@ -41,7 +41,7 @@ a {
 .footer {
     position: sticky;
     display: flex;
-    background: linear-gradient(#e66465, #9198e5);
+    background: #3E0915;
     font-family: 'Shadows Into Light Two', cursive;
     color: white;
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
@@ -63,9 +63,10 @@ main {
 .back_img {
     /* background-image: url('img/south_korea.jpeg');
     background-size: 100%;
-    background-attachment: fixed;  
-    background-repeat: repeat-y;   */
+    background-attachment: fixed; */ 
+    background-repeat: repeat-y;   
     background-color: #5a1a29;
+    background-size: cover;
 }
 
 nav {
@@ -79,18 +80,22 @@ nav {
 }
 
 .restaurant_transparency {
-    background-color: wheat;
+    background-color: #964F60;
     opacity: 0.75;
     color: black;
+    background-size: contain;
 }
 
 
 .transparency {
-    background-color: wheat;
+    background-color: #964F60;
     opacity: 0.75;
     padding: 5px 5px 5px 5px;
     color: black;
+    background-size: contain;
 }
+
+
 
 .body_text {
     padding: 0px 0 0 10px;
@@ -99,7 +104,7 @@ nav {
 
 
 
-.city_back {
+/* .city_back {
     padding: 0rem;
     height: 120vh;
     background-image: url('img/Gangnam_by_night_Seoul_South_Korea.jpg.webp');
@@ -107,19 +112,19 @@ nav {
     background-attachment: fixed;
     color: white;
     
-}
+} */
 
-.food_back {
+/* .food_back {
     margin: 0rem;
     padding: 0rem;
-    height: 120vh;
+    height: 120vh; */
     /* min-height: 120vh; */
-    background-image: url('img/baked-eggplant-salad-paprika-carrot-onion-garlic-korean-vegan-food-recipe-background-top-view-196863629.jpeg');
-    background-size: cover;
+    /* background-image: url('img/baked-eggplant-salad-paprika-carrot-onion-garlic-korean-vegan-food-recipe-background-top-view-196863629.jpeg');
+    background-size: cover; */
     /* background-blend-mode: soft-light; */
-    background-attachment: fixed;
+    /* background-attachment: fixed;
     
-}
+} */
 
 
 article > p {
@@ -151,7 +156,7 @@ h1 {
     text-align: center;
     margin: 5rem;
     padding: 5rem;
-    background-color: wheat;
+    background-color: #964F60;
     opacity: 0.75;
     padding: 5px 5px 5px 5px;
 }
@@ -171,7 +176,8 @@ h1 {
 
 .home_boxes {
     
-    background-color: wheat;
+    background-color: #964F60;
+    list-style: none;
     opacity: 0.75;
     padding: 5px 0px 5px 5px;
     color: black;
@@ -184,10 +190,5 @@ h1 {
     text-decoration: none;
     color: initial;
     border-radius: 8px;
-    background-color: wheat;
     text-align: center;
-}
-
-footer {
-    background: linear-gradient(#e66465, #9198e5);
 }

@@ -3,7 +3,7 @@
 {% block content%}
     <h1>Edit a city:</h1>
 
-    <form action="/cities/{{cities.id}}" method="POST">
+    <form action="/cities/{{cities.id}}" method="POST" class="transparency">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{ cities.name }}">
