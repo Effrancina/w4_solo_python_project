@@ -61,15 +61,6 @@ main {
 
 }
 
-/* .back_img { */
-    /* background-image: url('img/south_korea.jpeg');
-    background-size: 100%;
-    background-attachment: fixed; */ 
-    /* background-repeat: repeat-y;   
-    background-color: #5a1a29;
-    background-size: cover; */
-/* } */
-
 nav {
     height: 120vh;
 
@@ -105,24 +96,10 @@ nav {
 }
 
 
-
 .city_back {
     padding: 0rem;
     height: 100vh; 
 }
-
-/* .food_back {
-    margin: 0rem;
-    padding: 0rem;
-    height: 120vh; */
-    /* min-height: 120vh; */
-    /* background-image: url('img/baked-eggplant-salad-paprika-carrot-onion-garlic-korean-vegan-food-recipe-background-top-view-196863629.jpeg');
-    background-size: cover; */
-    /* background-blend-mode: soft-light; */
-    /* background-attachment: fixed;
-    
-} */
-
 
 article > p {
     margin: 0rem;
