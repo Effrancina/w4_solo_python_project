@@ -1,7 +1,8 @@
 body {
     margin: 0rem;
     padding: 0rem;
-    height: 120vh;   
+    height: 100vh; 
+    background-color: #5a1a29 
 }
 
 a {
@@ -60,14 +61,14 @@ main {
 
 }
 
-.back_img {
+/* .back_img { */
     /* background-image: url('img/south_korea.jpeg');
     background-size: 100%;
     background-attachment: fixed; */ 
-    background-repeat: repeat-y;   
+    /* background-repeat: repeat-y;   
     background-color: #5a1a29;
-    background-size: cover;
-}
+    background-size: cover; */
+/* } */
 
 nav {
     height: 120vh;
@@ -76,6 +77,7 @@ nav {
 
 .restaur {
     padding: 30px 0 0 0px;
+    height: 100vh;
    
 }
 
@@ -104,15 +106,10 @@ nav {
 
 
 
-/* .city_back {
+.city_back {
     padding: 0rem;
-    height: 120vh;
-    background-image: url('img/Gangnam_by_night_Seoul_South_Korea.jpg.webp');
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    
-} */
+    height: 100vh; 
+}
 
 /* .food_back {
     margin: 0rem;
