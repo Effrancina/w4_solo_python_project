@@ -1,17 +1,31 @@
 body {
     margin: 0rem;
     padding: 0rem;
-    height: 100vh; 
+    max-height: 100vh; 
     background-color: #5a1a29 
+}
+
+/* .background {
+    height: 100%;
+} */
+
+.background_cities {
+    /* height: 120vh; */
+    min-height: 120vh;
 }
 
 a {
     color: black;
 }
 
-.home {
-    list-style: none;
+li {
+    list-style-type: none; 
 }
+
+ul {
+    
+}
+
 .link_city {
     font-size: larger;
     font-weight: bold;
@@ -20,11 +34,10 @@ a {
 .fixed {
     display: flex;
     background: #3E0915;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Montserrat', cursive;
     color: white;
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
-    /* justify-content: flex-start; */
     justify-content: space-evenly;
     position: sticky;
     width: 100%;
@@ -40,29 +53,31 @@ a {
 }
 
 .footer {
-    position: sticky;
+    /* position: sticky; */
     display: flex;
     background: #3E0915;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Montserrat', cursive;
     color: white;
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    /* width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
 }
 
 
 main {
     margin: 0rem;
     padding: 0rem;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Montserrat', cursive;
 
 }
 
 nav {
-    height: 120vh;
+    display: flex;
+    height: 100vh;
+    align-items: center;
 
 }
 
@@ -85,7 +100,9 @@ nav {
     opacity: 0.75;
     padding: 5px 5px 5px 5px;
     color: black;
-    background-size: contain;
+    margin: 0 0 0 0;
+    text-align: center;
+    /* background-size: contain; */
 }
 
 
@@ -109,11 +126,22 @@ article > p {
 h1 { 
     margin: 0rem;
     padding: 0rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h2 {
+    margin: 0rem;
+    padding: 0rem;
     color: black;
     font-weight: bold;
     text-align: center;
     font-size: xx-large;
 }
+
+
 
 .emojidex-emoji {
     height: 5rem;
@@ -145,6 +173,7 @@ h1 {
     margin: 0rem;
     background-color: transparent;
     padding: 30px 0 0 30px;
+    
     
 }
 

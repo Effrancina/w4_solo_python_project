@@ -1,19 +1,21 @@
 {% extends "cities/base1.html" %}
 {% block content %}
-<section>
+<section class="background_cities">
     <h1>Cities</h1>
     <br>
     <br>
-    <section class="cities_boxes">
-    
-        {%for city in cities %}
-        <section>
-            <a class="link_city" href="/cities/{{city.id}}/restaurants">{{city.name}}</a>
-            <br>
-            <a href="/cities/{{city.id}}/edit" class="button">Edit</a>
-        </section>
-        {% endfor %}
-</section>
+    {%for city in cities %}
+    <section class="transparency">
+        <a class="link_city" href="/cities/{{city.id}}/restaurants">{{city.name}}</a>
+        <br>
+        <a href="/cities/{{city.id}}/edit" class="button">Edit</a>
+        <form action="/cities/{{city.id}}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+        <br>
+    </section>
+    {% endfor %}
+
 </section>
 
 
