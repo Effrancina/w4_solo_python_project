@@ -1,8 +1,6 @@
 {% extends "restaurants/base2.html" %}
 {% block content %}
-<div class="background_cities">
-    <h1>Restaurants</h1>
-    <br>
+<div class="cities">
         <div>
             {% for restaurant in restaurants %}
                 <section class="transparency">
@@ -23,7 +21,8 @@
                         <input type="submit" value="Delete">
                     </form>
                 </section>
-            
+                <br>
+                <br>
             {% endfor %}
         </div>
 </div>    
