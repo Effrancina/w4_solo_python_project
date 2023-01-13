@@ -2,10 +2,11 @@
 {% block content %}
 <section class="cities">
     {%for city in cities %}
-    <section>
+    <section class="transparency">
         <a class="city_name" href="/cities/{{city.id}}/restaurants">{{city.name}}</a>
         <br>
-        <a href="/cities/{{city.id}}/edit">Edit</a>
+        <a class="edit" href="/cities/{{city.id}}/edit">Edit</a>
+        <br>
         <form action="/cities/{{city.id}}/delete" method="POST">
             <input type="submit" value="Delete">
         </form>
