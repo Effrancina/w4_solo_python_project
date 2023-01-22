@@ -1,4 +1,4 @@
-# The Vegan Restaurants Bucketlist for South Korea
+# The Vegan Bucketlist for South Korea
 
 My application is designed to help the user track their favourite vegan restaurants in South Korea, and for them to be able to add additional restaurants they might want to try in the future.
 
