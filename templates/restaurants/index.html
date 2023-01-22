@@ -1,11 +1,9 @@
 {% extends "restaurants/base2.html" %}
 {% block content %}
-<div class="restaur">
-    <h1>Restaurants</h1>
-    <br>
-        <div class="flex">
+<div class="restaurants">
+        <div>
             {% for restaurant in restaurants %}
-                <section class="transparency">
+                <section class="restaurant_transparency">
                     <p>Name: {{restaurant.name}}</p>
                     <p>Cuisine: {{restaurant.cuisine}}</p>
                     <p>City: {{restaurant.city.name}}</p>
@@ -17,13 +15,16 @@
                         <input type="checkbox" id="tried" name="tried">
                         {% endif %}
                     </div>
-                    <a href="/restaurants/{{restaurant.id}}/edit" class="button">Edit</a>
                     <br>
-                    <form action="/cities/{{restaurant.id}}/delete" method="POST">
+                    <a href="/restaurants/{{restaurant.id}}/edit" class="edit">Edit</a>
+                    <br>
+                    <br>
+                    <form action="/restaurants/{{restaurant.id}}/delete" method="POST">
                         <input type="submit" value="Delete">
                     </form>
                 </section>
-            
+                <br>
+                <br>
             {% endfor %}
         </div>
 </div>    

@@ -2,21 +2,33 @@
 {% block page_content %}
 <section>
     <nav>
-        <ul class="menu">
-            <li class="home_boxes">    
-                <h2>Cities</h2>
-                <ul>
-                    <li><a href="/cities">All</a></li>
-                    <li><a href="/cities/new">Add</a></li>
-                </ul>
+        <ul>
+            <li> 
+                <div class="dropdown">   
+                    <span>Cities</span>
+                    <div class="dropdown-content">
+                        <a class="dropdown_item" href="/cities">All</a>
+                        <br>
+                        <a class="dropdown_item" href="/cities/new">Add</a>
+                    </div>
+                </div>
             </li>
-            </li>
-            <li class="home_boxes">
-                <h2>Restaurants</h2>
-                <ul>
-                    <li><a href="/restaurants">All</a></li>
-                    <li><a href="/restaurants/new">Add</a></li>
-                </ul>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <li>
+                <div class="dropdown">
+                    <span>Restaurants</span>
+                    <div class="dropdown-content">
+                        <a class="dropdown_item" href="/restaurants">All</a>
+                        <br>
+                        <a class="dropdown_item" href="/restaurants/new">Add</a>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>

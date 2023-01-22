@@ -3,30 +3,28 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🇰🇷 Vegan Bucket List</title>
 </head>
-<body class="back_img">
+<body>
     <header>
         <div class="fixed"> 
             <img class="emojidex-emoji" src="https://cdn.emojidex.com/emoji/seal/kimchi.png" emoji-code="kimchi" height="50" width="50" alt="kimchi" />
-            <h1 align="middle">Your Vegan Restaurants Bucketlist for South Korea</h1>
-            <li class="home"><a href="/">Home</a></li>
+            <h1 align="middle">Vegan Eats in South Korea</h1>
+            <li><a class="home" href="/">Home</a></li>
         </div>
     </header>
     <main>
     {% block page_content %}
     {% endblock %}
     </main>
-    <footer>
-        <div class="footer"> 
-            <img class="emojidex" src="https://cdn.emojidex.com/emoji/seal/kimchi.png" emoji-code="kimchi" height="25" width="25" alt="kimchi" />
-            <p align="middle">Kimchi Is The Absolute Best</p>
-        </div>
+    <footer class="footer">
+        <img class="emojidex" src="https://cdn.emojidex.com/emoji/seal/kimchi.png" emoji-code="kimchi" height="25" width="25" alt="kimchi" />
+        <p align="middle">🇰🇷 Vegan Bucket List</p>
     </footer>
 </body>
 </html>

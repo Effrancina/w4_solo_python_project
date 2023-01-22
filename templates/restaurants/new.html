@@ -1,13 +1,15 @@
 {% extends "restaurants/base2.html" %}
 {% block content %}
-<div class="restaur">
+<div class="new">
     <h1>Add a new restaurant</h1>
     <br>
     <form action="/restaurants" method="POST" class="restaurant_transparency">
         <div>
+            <br>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
         </div>
+        <br>
         <div>
             <label for="city">City:</label>
                 <select class="dropbtn" name="city_id">
@@ -15,14 +17,18 @@
                     <option id="name" value="{{city.id}}">{{ city.name}} </option>
                     {% endfor %}
                 </select>
+        </div>
+        <br>
         <div>
             <label for="cuisine">Cuisine:</label>
             <input type="text" id="cuisine" name="cuisine">
         </div>
+        <br>
         <div>
             <label for="tried">Tried?</label>
             <input type="checkbox" id="tried" name="tried">
         </div>
+        <br>
         <input type="submit">
     </form>
 </div>

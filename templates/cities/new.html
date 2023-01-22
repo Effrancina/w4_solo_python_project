@@ -1,20 +1,23 @@
 {% extends "cities/base1.html" %}
 {% block content %}
+<div class="new">
+    <h1>Add a new city</h1>
 
-<h1>Add a new city</h1>
-
-<form action="/cities" method="POST" class="transparency">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-    </div>
-    <div>
-        <label for="visited">Have you been?</label>
-        <input type="checkbox" id="visited" name="visited">
-    </div>
-    <div>
-        <input type="submit">
-    </div>
-</form>
-
+    <form action="/cities" method="POST" class="transparency">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <br>
+        <div>
+            <label for="visited">Have you been?</label>
+            <input type="checkbox" id="visited" name="visited">
+        </div>
+        <br>
+        <div>
+            <input type="submit">
+        </div>
+        <br>
+    </form>
+</div>
 {% endblock %}

@@ -1,33 +1,89 @@
 body {
     margin: 0rem;
     padding: 0rem;
-    height: 100vh; 
+    max-height: 100vh; 
     background-color: #5a1a29 
 }
 
+/* .background {
+    height: 100%;
+} */
+
+.cities {
+    /* height: 120vh; */
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.restaurants {
+    min-height: 120vh;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.new {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5rem;
+}
+
 a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none; 
+}
+
+ul {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+}
+
+.city_name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.city_name:hover {
     color: black;
 }
 
-.home {
-    list-style: none;
-}
-.link_city {
-    font-size: larger;
-    font-weight: bold;
+.edit:hover {
+    color: black;
 }
 
 .fixed {
     display: flex;
     background: #3E0915;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Montserrat', cursive;
     color: white;
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
-    /* justify-content: flex-start; */
     justify-content: space-evenly;
     position: sticky;
     width: 100%;
+}
+
+.home:hover {
+        color: #964F60;
 }
 
 .flex {
@@ -40,31 +96,77 @@ a {
 }
 
 .footer {
-    position: sticky;
+    /* position: sticky; */
     display: flex;
     background: #3E0915;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Montserrat', cursive;
     color: white;
     cursor: url("https://cdn.emojidex.com/emoji/seal/kimchi.png"), auto;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    /* width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
 }
 
 
 main {
     margin: 0rem;
     padding: 0rem;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Montserrat', cursive;
 
 }
 
-nav {
-    height: 120vh;
+/* nav {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+} */
 
+span {
+    color: white;
+    font-size: 4rem;
+    font-weight: bolder;
 }
+
+span:hover {
+    color: #964F60;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5a1a29;
+    min-width: 15rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown_item {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+/* .dropdown_item:hover {
+
+
+} */
 
 .restaur {
     padding: 30px 0 0 0px;
@@ -73,22 +175,36 @@ nav {
 }
 
 .restaurant_transparency {
-    background-color: #964F60;
+    /* background-color: #964F60;
     opacity: 0.75;
     color: black;
-    background-size: contain;
-}
-
-
-.transparency {
+    background-size: contain; */
     background-color: #964F60;
     opacity: 0.75;
     padding: 5px 5px 5px 5px;
     color: black;
-    background-size: contain;
+    margin: 0 0 0 0;
+    text-align: center;
+    height: 15rem;
+    width: 15rem;
 }
 
 
+
+.transparency {
+    display: flex;
+    background-color: #964F60;
+    opacity: 0.75;
+    padding: 5px 5px 5px 5px;
+    color: black;
+    margin: 0 0 0 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 10rem;
+    width: 15rem;
+    /* background-size: contain; */
+}
 
 .body_text {
     padding: 0px 0 0 10px;
@@ -109,11 +225,25 @@ article > p {
 h1 { 
     margin: 0rem;
     padding: 0rem;
-    color: black;
+    color: white;
     font-weight: bold;
     text-align: center;
     font-size: xx-large;
 }
+
+h1:hover {
+    color: #964F60;
+}
+
+/* h2 {
+    margin: 0rem;
+    padding: 0rem;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+} */
+
 
 .emojidex-emoji {
     height: 5rem;
@@ -145,6 +275,7 @@ h1 {
     margin: 0rem;
     background-color: transparent;
     padding: 30px 0 0 30px;
+    
     
 }
 

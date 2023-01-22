@@ -1,13 +1,15 @@
 
 {% extends "cities/base1.html" %}
 {% block content%}
-    <h1>Edit a city:</h1>
+<div class="new">
+    <h1>Edit city:</h1>
 
     <form action="/cities/{{cities.id}}" method="POST" class="transparency">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{ cities.name }}">
         </div>
+        <br>
         <div>
             <label for="visited">Have you been?</label>
             {% if cities.visited %}
@@ -16,6 +18,8 @@
             <input type="checkbox" id="visited" name="visited">
             {% endif %}
         </div>
+        <br>
         <input type="submit" value="Update">
     </form>
+</div>
 {% endblock %}
